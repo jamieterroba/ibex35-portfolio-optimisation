@@ -1,9 +1,12 @@
+from pathlib import Path
+PROJECT_ROOT = Path(__file__).resolve().parent
+
 # Dates:
-end_date = "2026-10-01"
-start_date = "2021-10-01"
+end_date = "2026-09-30"
+start_date = "2021-09-30"
 
 # Asset universe:
-asset_file = "ibex_tickers.csv" 
+asset_file = PROJECT_ROOT / "data" / "ibex_tickers.csv"
 
 # Other
 trading_days = 252
