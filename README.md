@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project applies Modern Portfolio Theory to historical daily price data between 2021-09-30 and 2026-09-30 for the 35 equities in the IBEX 35 index. It first creates randomly generated long-only portfolios and then constrained maximum-Sharpe-ratio portfolios.
+This project applies Modern Portfolio Theory to historical daily price data between 2021-09-30 and 2026-09-30 for 34 of the 35 equities in the IBEX 35 index. Puig Brands (PUIG.MC) is excluded because it only listed in May 2024 and has no price history for most of the period. It first creates randomly generated long-only portfolios and then constrained maximum-Sharpe-ratio portfolios.
 
 The analysis calculates annualised returns, annualised volatility, and Sharpe ratios. It also plots the Capital Market Line (CML).
 
@@ -20,9 +20,9 @@ The analysis calculates annualised returns, annualised volatility, and Sharpe ra
 
 ## Key Results
 
-- The market portfolio achieved an annualised return of 33.09%.
-- Its annualised volatility was 14.91%.
-- Its Sharpe ratio was 1.9406.
+- The market portfolio achieved an annualised return of 23.27%.
+- Its annualised volatility was 15.15%.
+- Its Sharpe ratio was 1.2609.
 - The resulting allocation was diversified, with the largest weight assigned to a number of assets at 5%.
 
 ## Installation
@@ -31,7 +31,9 @@ Clone the repository and install the required Python packages:
 
 ```bash
 git clone https://github.com/jamieterroba/ibex35-portfolio-optimisation
-cd https://github.com/jamieterroba/ibex35-portfolio-optimisation
+cd ibex35-portfolio-optimisation
+python -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
 ```
 
@@ -46,7 +48,7 @@ jupyter notebook
 Then open and run:
 
 ```text
-main.ipynb
+notebooks/main.ipynb
 ```
 
 ## Limitations
