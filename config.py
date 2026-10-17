@@ -14,3 +14,4 @@ risk_free_rate = 0.041670 # 10Y Spain govt yield on 1/10/2026
 num_random_portfolios = 5000
 max_weight = 0.05 # for constrained optimisation
 random_seed = 42
+obj_mean_annual_return = 0.25
