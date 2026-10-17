@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project applies Modern Portfolio Theory to historical daily price data between 2021-09-30 and 2026-09-30 for the 35 equities in the IBEX 35 index. It first creates randomly generated long-only portfolios and then constrained maximum-Sharpe-ratio portfolios.
+This project applies Modern Portfolio Theory to historical daily price data between 2021-09-30 and 2026-09-30 for 34 of the 35 equities in the IBEX 35 index. Puig Brands (PUIG.MC) is excluded because it only listed in May 2024 and has no price history for most of the period. It first creates randomly generated long-only portfolios and then constrained maximum-Sharpe-ratio portfolios.
 
 The analysis calculates annualised returns, annualised volatility, and Sharpe ratios. It also plots the Capital Market Line (CML) and applies Ledoit-Wolf covariance shrinkage.
 
@@ -17,20 +17,19 @@ The analysis calculates annualised returns, annualised volatility, and Sharpe ra
 - Applied no-short-selling and no leverage bounds: each asset weight lies between 0 and 1 or 0 and 0.05 (or equal-weighted).
 - Compared the optimal portfolios: equal-weighted; no-short; and no-short, max-5%-weight.
 - Plotted the CML using the risk-free rate and the market portfolio (constrained to 5% maximum asset weight).
-- Found an optimal portfolio along the CML with a target annualised return of 35%.
+- Found an optimal portfolio along the CML with a target annualised return of 25%.
 - Calculated the Ledoit-Wolf covariance matrix and applied it to find the optimal portfolio (no-short, no-leverage).
 - Compared the Ledoit-Wolf optimal portfolio to the basic Markowitz optimal portfolio.
 
 ## Key Results
 
-- The market portfolio achieved an in-sample annualised mean return of 33.09%. Its annualised volatility (STD) was 14.91% and its Sharpe ratio was 1.9406.
-- The resulting allocation was diversified at 22 equities, with the largest weight assigned to a number of assets at 5%.
+- The market portfolio achieved an in-sample annualised mean return of 23.27%. Its annualised volatility (STD) was 15.15% and its Sharpe ratio was 1.26.
+- The resulting allocation was diversified at 21 equities, with the largest weight assigned to a number of assets at 5%.
 - The optimal portfolio under only no-short and no-leverage constraints outperformed the market portfolio, but represents an unlikely corner solution.
 - The market portfolio heavily outperformed the equal-weighted portfolio.
-- The portfolio along the CML which combines the risk-free asset and the market portfolio, with a target mean annual returns of 35% obtained an annual standard deviation of 15.89% and a Sharpe ratio of 1.94.
-- The new optimal portfolio under Ledoit-Wolf covariance estimation obtained an in-sample annual mean return of 42.00%, an annual standard deviation of 14.14% and a Sharpe ratio of 2.68.
-- The new optimal portfolio under Ledoit-Wolf covariance estimation had a covariance shrinkage factor of 0.036544.
-
+- The portfolio along the CML which combines the risk-free asset and the market portfolio, with a target mean annual returns of 25% obtained an annual standard deviation of 16.52% and a Sharpe ratio of 1.26.
+- The new optimal portfolio under Ledoit-Wolf covariance estimation obtained an in-sample annual mean return of 28.09%, an annual standard deviation of 14.28% and a Sharpe ratio of 1.68.
+- The new optimal portfolio under Ledoit-Wolf covariance estimation had a covariance shrinkage factor of 0.017459.
 
 ## Installation
 
